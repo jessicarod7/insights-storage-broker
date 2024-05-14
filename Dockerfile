@@ -19,8 +19,6 @@ COPY rhosak_map.yaml /opt/app-root/src/rhosak_map.yaml
 
 COPY LICENSE .
 
-USER 1001
-
 RUN python3.11 -m pip install --upgrade pip && python3.11 -m pip install .
 
 CMD ["storage_broker_consumer_api"]
