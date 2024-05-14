@@ -20,7 +20,7 @@ objects:
         public:
           enabled: true
       podSpec:
-        image: ${IMAGE_NAME}:${IMAGE_TAG}
+        image: ${IMAGE}:${IMAGE_TAG}
         livenessProbe:
           failureThreshold: 3
           httpGet:
@@ -163,7 +163,7 @@ parameters:
   value: "insights-storage-broker"
   required: true
 - descripton: Insights-storage-broker image name
-  name: IMAGE_NAME
+  name: IMAGE
   value: "quay.io/cloudservices/insights-storage-broker"
 - description: Permanent Bucket
   name: PERM_BUCKET
