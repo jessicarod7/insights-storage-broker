@@ -17,7 +17,7 @@ COPY pyproject.toml pyproject.toml
 COPY default_map.yaml /opt/app-root/src/default_map.yaml
 COPY rhosak_map.yaml /opt/app-root/src/rhosak_map.yaml
 
-COPY LICENSE /opt/app-root/src/licenses/LICENSE 
+COPY LICENSE .
 
 USER 1001
 
