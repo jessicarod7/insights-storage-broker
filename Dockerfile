@@ -21,4 +21,6 @@ COPY LICENSE .
 
 RUN python3.11 -m pip install --upgrade pip && python3.11 -m pip install .
 
+USER 1001
+
 CMD ["storage_broker_consumer_api"]
