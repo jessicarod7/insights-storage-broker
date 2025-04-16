@@ -9,8 +9,8 @@ setup(
     install_requires=[
         "prometheus-client==0.21.1",
         "logstash-formatter==0.5.17",
+        "watchtower==3.4.0",
         "boto3==1.37.33",
-        "watchtower==3.3.1",
         "confluent-kafka==2.9.0",
         "pyyaml==6.0.2",
         "attrs==18.2.0",
