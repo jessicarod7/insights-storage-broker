@@ -37,6 +37,8 @@ services:
     environment:
       - MINIO_ACCESS_KEY=$MINIO_ACCESS_KEY
       - MINIO_SECRET_KEY=$MINIO_SECRET_KEY
+      - MINIO_ROOT_USER=$MINIO_ACCESS_KEY
+      - MINIO_ROOT_PASSWORD=$MINIO_SECRET_KEY
 
   minio-createbuckets:
     image: minio/mc
@@ -45,7 +47,7 @@ services:
     restart: on-failure
     entrypoint: >
       /bin/sh -c "
-      /usr/bin/mc config host add myminio http://minio:9000 "$MINIO_ACCESS_KEY" "$MINIO_SECRET_KEY" || exit 1;
+      /usr/bin/mc alias set myminio http://minio:9000 "$MINIO_ACCESS_KEY" "$MINIO_SECRET_KEY" || exit 1;
       /usr/bin/mc mb --ignore-existing myminio/insights-upload-perma;
       /usr/bin/mc policy set upload myminio/insights-upload-perma;
       "
