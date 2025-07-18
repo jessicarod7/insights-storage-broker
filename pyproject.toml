@@ -10,10 +10,10 @@ packages = [
 [tool.poetry.dependencies]
 python = "^3.11"
 confluent-kafka = "^2.2.0"
-attrs = "18.2.0"
-prometheus-client = "0.21.1"
+attrs = "25.3.0"
+prometheus-client = "0.22.1"
 pyyaml = "6.0.2"
-app-common-python = "0.2.3"
+app-common-python = "0.2.8"
 boto3 = "^1.28.21"
 watchtower = "^3.0.1"
 logstash_formatter = "^0.5.17"
@@ -21,7 +21,7 @@ Flask = "3.1.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^8.0.0"
-flake8 = "^3.7.9"
+flake8 = "^7.3.0"
 
 [build-system]
 requires = ["poetry>=0.12"]
